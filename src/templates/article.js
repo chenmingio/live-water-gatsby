@@ -14,6 +14,7 @@ const ArticleTemplate = ({ data }) => (
         </p>
         {/*<Img fixed={data.strapiArticle.image.childImageSharp.fixed} />*/}
         <p>{data.strapiArticle.url}</p>
+      <p>{data.strapiArticle.content}</p>
     </Layout>
 )
 
@@ -24,6 +25,7 @@ export const query = graphql`
     strapiArticle(id: { eq: $id }) {
       title
       url
+      content
       node {
         id
         name
